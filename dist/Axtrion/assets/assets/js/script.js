@@ -2,7 +2,6 @@
 (function($){
 	'use strict';
 	var $win = $(window), $body = $('body'), $doc = $(document);
-	
 	// Touch Class
 	if (!("ontouchstart" in document.documentElement)) {
 		$body.addClass("no-touch");

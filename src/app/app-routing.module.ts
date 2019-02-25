@@ -7,16 +7,22 @@ import { TransactionsComponent } from './components/transactions/transactions.co
 import { ProfileComponent } from './components/profile/profile.component';
 import { KycComponent } from './components/kyc/kyc.component';
 import { KycFormComponent } from './components/kyc/kyc-form/kyc-form.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', component: LandingPageComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'buytokens', component: BuyTokensComponent },
   { path: 'icodistribution', component: IcoDistributionComponent },
   { path: 'transactions', component: TransactionsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'kyc', component: KycComponent },
-  { path: 'kyc-form', component: KycFormComponent }
+  { path: 'kyc-form', component: KycFormComponent },
+  { path: 'landing-page', component: LandingPageComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({

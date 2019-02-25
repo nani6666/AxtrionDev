@@ -11,6 +11,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { KycComponent } from './components/kyc/kyc.component';
 import { KycFormComponent } from './components/kyc/kyc-form/kyc-form.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { KycFormComponent } from './components/kyc/kyc-form/kyc-form.component';
     HeaderComponent,
     FooterComponent,
     KycComponent,
-    KycFormComponent
+    KycFormComponent,
+    LandingPageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

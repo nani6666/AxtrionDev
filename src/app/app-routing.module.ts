@@ -10,6 +10,7 @@ import { KycFormComponent } from './components/kyc/kyc-form/kyc-form.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'kyc-form', component: KycFormComponent },
   { path: 'landing-page', component: LandingPageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+  { path: 'api-demo', component: ApiIntegrationComponent }
 ];
 
 @NgModule({

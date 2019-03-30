@@ -14,6 +14,8 @@ import { KycFormComponent } from './components/kyc/kyc-form/kyc-form.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,13 @@ import { SignupComponent } from './components/signup/signup.component';
     KycFormComponent,
     LandingPageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ApiIntegrationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

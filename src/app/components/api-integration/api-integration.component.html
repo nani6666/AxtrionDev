@@ -1,0 +1,47 @@
+
+<h3>Block Chain Receive API Payments</h3>
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th width="45%">API Requests</th>
+        <th width="15%">Method</th>
+        <th width="40%">Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td width="45%">https://api.blockchain.info/v2/receive?xpub=$xpub&callback=$callback_url&key=$key&gap_limit=$gap_limit</td>
+        <td width="15%">GET</td>
+        <td width="40%"><pre>{{getaddressRequest | json}}</pre></td>
+      </tr>
+      <tr>
+          <td width="45%">https://api.blockchain.info/v2/receive/balance_update</td>
+          <td width="15%">POST</td>
+          <td width="40%"><pre>{{postBalanceUpdate | json}}</pre></td>
+      </tr>
+      <tr>
+          <td width="45%">https://api.blockchain.info/v2/receive/block_notification</td>
+          <td width="15%">POST</td>
+          <td width="40%"><pre>{{notifydata | json}}</pre></td>
+      </tr>
+      <tr>
+          <td width="45%">https://api.blockchain.info/v2/receive/balance_update/:id?key=[your-key-here]</td>
+          <td width="15%">DELETE</td>
+          <td width="40%"><pre>{{deleteBalupdate | json}}</pre></td>
+      </tr>
+      
+      <tr>
+          <td width="45%">https://api.blockchain.info/v2/receive/checkgap?xpub=[yourxpubhere]]&key=[yourkeyhere]</td>
+          <td width="15%">GET</td>
+          <td width="40%"><pre>{{gapdata | json}}</pre></td>
+      </tr>
+      <tr>
+          <td width="45%">https://api.blockchain.info/v2/receive/callback_log?callback=[clientCallback]&secret=[yourkeyhere]&key=[yourkeyhere]</td>
+          <td width="15%">GET</td>
+          <td width="40%"><pre>{{callbackData | json}}</pre></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

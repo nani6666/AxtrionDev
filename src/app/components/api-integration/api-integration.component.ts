@@ -3,7 +3,7 @@ import {CoinbaseService } from '../../services/coinbase.service';
 
 const blockchainApikey = '1fe57c00-a072-4218-9bd5-843ce3e61e93';
 const blockchainXPUB = 'xpub6CufqrzPqqNbQPza3jhDyeyEnZN68S6kMxUF6Qb3ANnEzd8FhM355c4C2YZ6BaqgQ5rqfzTMb2s6JKMyadJ83tFbaAhfoAUELUcjuA6nkXP';
-const blockchainInvoiceID = encodeURIComponent('https://mystore.com?invoice_id=058921123');
+const blockchainInvoiceID = encodeURIComponent('https://mystore.com?invoice_id=1');
 
 
 @Component({

@@ -46,6 +46,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/landing-page/landing-page.component */ "./src/app/components/landing-page/landing-page.component.ts");
 /* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
 /* harmony import */ var _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/signup/signup.component */ "./src/app/components/signup/signup.component.ts");
+/* harmony import */ var _components_api_integration_api_integration_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/api-integration/api-integration.component */ "./src/app/components/api-integration/api-integration.component.ts");
+
 
 
 
@@ -70,7 +72,8 @@ var routes = [
     { path: 'kyc-form', component: _components_kyc_kyc_form_kyc_form_component__WEBPACK_IMPORTED_MODULE_9__["KycFormComponent"] },
     { path: 'landing-page', component: _components_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_10__["LandingPageComponent"] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"] },
-    { path: 'signup', component: _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_12__["SignupComponent"] }
+    { path: 'signup', component: _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_12__["SignupComponent"] },
+    { path: 'api-demo', component: _components_api_integration_api_integration_component__WEBPACK_IMPORTED_MODULE_13__["ApiIntegrationComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -169,6 +172,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/landing-page/landing-page.component */ "./src/app/components/landing-page/landing-page.component.ts");
 /* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
 /* harmony import */ var _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/signup/signup.component */ "./src/app/components/signup/signup.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _components_api_integration_api_integration_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/api-integration/api-integration.component */ "./src/app/components/api-integration/api-integration.component.ts");
+
+
 
 
 
@@ -204,17 +211,145 @@ var AppModule = /** @class */ (function () {
                 _components_kyc_kyc_form_kyc_form_component__WEBPACK_IMPORTED_MODULE_13__["KycFormComponent"],
                 _components_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_14__["LandingPageComponent"],
                 _components_login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
-                _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_16__["SignupComponent"]
+                _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_16__["SignupComponent"],
+                _components_api_integration_api_integration_component__WEBPACK_IMPORTED_MODULE_18__["ApiIntegrationComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/api-integration/api-integration.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/api-integration/api-integration.component.css ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXBpLWludGVncmF0aW9uL2FwaS1pbnRlZ3JhdGlvbi5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/api-integration/api-integration.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/api-integration/api-integration.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<h3>Block Chain Receive API Payments</h3>\n<div>\n  <table class=\"table table-bordered\">\n    <thead>\n      <tr>\n        <th width=\"45%\">API Requests</th>\n        <th width=\"15%\">Method</th>\n        <th width=\"40%\">Response</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td width=\"45%\">https://api.blockchain.info/v2/receive?xpub=$xpub&callback=$callback_url&key=$key&gap_limit=$gap_limit</td>\n        <td width=\"15%\">GET</td>\n        <td width=\"40%\"><pre>{{getaddressRequest | json}}</pre></td>\n      </tr>\n      <tr>\n          <td width=\"45%\">https://api.blockchain.info/v2/receive/balance_update</td>\n          <td width=\"15%\">POST</td>\n          <td width=\"40%\"><pre>{{postBalanceUpdate | json}}</pre></td>\n      </tr>\n      <tr>\n          <td width=\"45%\">https://api.blockchain.info/v2/receive/block_notification</td>\n          <td width=\"15%\">POST</td>\n          <td width=\"40%\"><pre>{{notifydata | json}}</pre></td>\n      </tr>\n      <tr>\n          <td width=\"45%\">https://api.blockchain.info/v2/receive/balance_update/:id?key=[your-key-here]</td>\n          <td width=\"15%\">DELETE</td>\n          <td width=\"40%\"><pre>{{deleteBalupdate | json}}</pre></td>\n      </tr>\n      \n      <tr>\n          <td width=\"45%\">https://api.blockchain.info/v2/receive/checkgap?xpub=[yourxpubhere]]&key=[yourkeyhere]</td>\n          <td width=\"15%\">GET</td>\n          <td width=\"40%\"><pre>{{gapdata | json}}</pre></td>\n      </tr>\n      <tr>\n          <td width=\"45%\">https://api.blockchain.info/v2/receive/callback_log?callback=[clientCallback]&secret=[yourkeyhere]&key=[yourkeyhere]</td>\n          <td width=\"15%\">GET</td>\n          <td width=\"40%\"><pre>{{callbackData | json}}</pre></td>\n      </tr>\n      \n    </tbody>\n  </table>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/api-integration/api-integration.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/api-integration/api-integration.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: ApiIntegrationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiIntegrationComponent", function() { return ApiIntegrationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_coinbase_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/coinbase.service */ "./src/app/services/coinbase.service.ts");
+
+
+
+var blockchainApikey = '1fe57c00-a072-4218-9bd5-843ce3e61e93';
+var blockchainXPUB = 'xpub6CufqrzPqqNbQPza3jhDyeyEnZN68S6kMxUF6Qb3ANnEzd8FhM355c4C2YZ6BaqgQ5rqfzTMb2s6JKMyadJ83tFbaAhfoAUELUcjuA6nkXP';
+var blockchainInvoiceID = encodeURIComponent('https://mystore.com?invoice_id=058921123');
+var ApiIntegrationComponent = /** @class */ (function () {
+    function ApiIntegrationComponent(blockchainService) {
+        this.blockchainService = blockchainService;
+    }
+    ApiIntegrationComponent.prototype.ngOnInit = function () {
+        this.getReceivebc();
+        this.notificationTestbc();
+        this.gapdatbc();
+        this.calllogsbc();
+    };
+    ApiIntegrationComponent.prototype.getReceivebc = function () {
+        var _this = this;
+        this.blockchainService.getCallreceiveBlockchain('?xpub=' + blockchainXPUB + '&callback='
+            + blockchainInvoiceID + '&key=' + blockchainApikey + '&gap_limit=' + 1500).subscribe(function (res) {
+            console.log(res.address);
+            _this.getaddressRequest = res;
+            _this.balance_updateApibc(res.address);
+        });
+    };
+    ApiIntegrationComponent.prototype.balance_updateApibc = function (address) {
+        var _this = this;
+        var balanceUpdateData = {
+            key: blockchainApikey,
+            addr: address,
+            callback: 'https://mystore.com?invoice_id=123',
+            onNotification: 'KEEP',
+            op: 'RECEIVE',
+            confs: 5
+        };
+        this.blockchainService.postReceivePaymentsbc('/balance_update', balanceUpdateData).subscribe(function (respBalData) {
+            _this.postBalanceUpdate = respBalData;
+            _this.balanceUpdtae(respBalData.id);
+        });
+    };
+    ApiIntegrationComponent.prototype.balanceUpdtae = function (id) {
+        var _this = this;
+        this.blockchainService.deleteBalanceupdate('/balance_update/' + id + '?key=' + blockchainApikey).subscribe(function (respDataDelete) {
+            console.log(respDataDelete);
+            _this.deleteBalupdate = respDataDelete;
+        });
+    };
+    ApiIntegrationComponent.prototype.notificationTestbc = function () {
+        var _this = this;
+        var notifyData = {
+            key: blockchainApikey,
+            height: 25,
+            callback: 'https://mysite.com/block?request_id=1234',
+            onNotification: 'DELETE'
+        };
+        this.blockchainService.postReceivePaymentsbc('/block_notification', notifyData).subscribe(function (respData) {
+            console.log(respData);
+            _this.notifydata = respData;
+        });
+    };
+    ApiIntegrationComponent.prototype.gapdatbc = function () {
+        var _this = this;
+        this.blockchainService.getCallreceiveBlockchain('/checkgap?xpub=' + blockchainXPUB + '&key=' + blockchainApikey).subscribe(function (respData) {
+            console.log(respData);
+            _this.gapdata = respData;
+        });
+    };
+    ApiIntegrationComponent.prototype.calllogsbc = function () {
+        var _this = this;
+        this.blockchainService.getCallreceiveBlockchain('/callback_log?' +
+            'callback=https%3A%2F%2Fmystore.com%3Finvoice_id%3D05892112%26secret%3DZzsMLGKe162CfA5EcG6j'
+            + '&key=' + blockchainApikey).subscribe(function (respData) {
+            console.log(respData);
+            _this.callbackData = respData;
+        });
+    };
+    ApiIntegrationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-api-integration',
+            template: __webpack_require__(/*! ./api-integration.component.html */ "./src/app/components/api-integration/api-integration.component.html"),
+            styles: [__webpack_require__(/*! ./api-integration.component.css */ "./src/app/components/api-integration/api-integration.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_coinbase_service__WEBPACK_IMPORTED_MODULE_2__["CoinbaseService"]])
+    ], ApiIntegrationComponent);
+    return ApiIntegrationComponent;
 }());
 
 
@@ -891,6 +1026,54 @@ var TransactionsComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], TransactionsComponent);
     return TransactionsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/coinbase.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/coinbase.service.ts ***!
+  \**********************************************/
+/*! exports provided: CoinbaseService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoinbaseService", function() { return CoinbaseService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var blockchainReceivePaymentsURL = 'https://api.blockchain.info/v2/receive';
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+        'Content-Type': 'text/plain',
+    })
+};
+var CoinbaseService = /** @class */ (function () {
+    function CoinbaseService(httpClient) {
+        this.httpClient = httpClient;
+    }
+    CoinbaseService.prototype.getCallreceiveBlockchain = function (url) {
+        return this.httpClient.get(blockchainReceivePaymentsURL + url);
+    };
+    CoinbaseService.prototype.postReceivePaymentsbc = function (url, data) {
+        return this.httpClient.post(blockchainReceivePaymentsURL + url, data, httpOptions);
+    };
+    CoinbaseService.prototype.deleteBalanceupdate = function (url) {
+        return this.httpClient.delete(blockchainReceivePaymentsURL + url);
+    };
+    CoinbaseService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], CoinbaseService);
+    return CoinbaseService;
 }());
 
 

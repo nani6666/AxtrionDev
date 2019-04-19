@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup , FormBuilder , FormArray , Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+  profileform: FormGroup;
   constructor() { }
 
   ngOnInit() {
+
+    this.profileform = new FormGroup({
+      firstName: new FormControl()
+   });
   }
 
 }

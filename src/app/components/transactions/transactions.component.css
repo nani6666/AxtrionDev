@@ -1,0 +1,12 @@
+.tableht{
+    height:350px;
+    overflow-y: auto;
+}
+
+.btnht{
+    height: 38px;
+}
+
+.forminput{
+display:none;
+}

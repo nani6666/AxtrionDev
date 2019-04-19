@@ -11,6 +11,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
+import { UsersListComponent } from './components/users/users-list/users-list.component';
+import { UserDetailsComponent } from './components/users/user-details/user-details.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -24,7 +26,9 @@ const routes: Routes = [
   { path: 'landing-page', component: LandingPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'api-demo', component: ApiIntegrationComponent }
+  { path: 'api-demo', component: ApiIntegrationComponent },
+  { path: 'user-details', component: UserDetailsComponent },
+  { path: 'user-list', component: UsersListComponent }
 ];
 
 @NgModule({

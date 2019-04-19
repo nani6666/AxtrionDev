@@ -20,20 +20,20 @@
               </a>
               <ul class="topbar-nav">
                   <li class="topbar-nav-item relative">
-                      <span class="user-welcome d-none d-lg-inline-block">Welcome! Stefan Harary</span>
-                      <a class="toggle-tigger user-thumb" href="#"><em class="ti ti-user"></em></a>
-                      <div class="toggle-class dropdown-content dropdown-content-right dropdown-arrow-right user-dropdown">
+                      <span class="user-welcome d-none d-lg-inline-block">Welcome! {{name?.name}}</span>
+                      <a class="toggle-tigger user-thumb"  (click)="profileflagactive()"><em class="ti ti-user"></em></a>
+                      <div class="toggle-class dropdown-content dropdown-content-right dropdown-arrow-right user-dropdown" [ngClass]="{'active': profileflag}">
                           <div class="user-status">
                               <h6 class="user-status-title">Token balance</h6>
                               <div class="user-status-balance">12,000,000 <small>TWZ</small></div>
                           </div>
                           <ul class="user-links">
-                              <li><a href="profile.html"><i class="ti ti-id-badge"></i>My Profile</a></li>
-                              <li><a href="#"><i class="ti ti-infinite"></i>Referral</a></li>
-                              <li><a href="#"><i class="ti ti-eye"></i>Activity</a></li>
+                              <li><a [routerLink]="['/profile']"><i class="ti ti-id-badge"></i>My Profile</a></li>
+                              <li><a ><i class="ti ti-infinite"></i>Referral</a></li>
+                              <li><a ><i class="ti ti-eye"></i>Activity</a></li>
                           </ul>
                           <ul class="user-links bg-light">
-                              <li><a href="sign-in.html"><i class="ti ti-power-off"></i>Logout</a></li>
+                              <li><a style="cursor: pointer;" (click)="logout()"><i class="ti ti-power-off"></i>Logout</a></li>
                           </ul>
                       </div>
                   </li><!-- .topbar-nav-item -->
@@ -50,9 +50,10 @@
                   <li><a [routerLink]="['/icodistribution']" routerLinkActive="router-link-active"><em class="ikon ikon-distribution"></em> ICO Distribution</a></li>
                   <li><a [routerLink]="['/transactions']" routerLinkActive="router-link-active"><em class="ikon ikon-transactions"></em> Transactions</a></li>
                   <li><a [routerLink]="['/profile']" routerLinkActive="router-link-active"><em class="ikon ikon-user"></em> Profile</a></li>
-                  <!-- <li class="has-dropdown page-links-all"><a class="drop-toggle" href="#"><em class="ikon ikon-exchange"></em> Pages</a>
+                  <li *ngIf="userslist"><a [routerLink]="['/user-list']" routerLinkActive="router-link-active"><em class="fa fa-users" aria-hidden="true"></em> &nbsp; Users</a></li>
+                  <!-- <li class="has-dropdown page-links-all"><a class="drop-toggle" ><em class="ikon ikon-exchange"></em> Pages</a>
                       <ul class="navbar-dropdown">
-                          <li class="has-dropdown"><a class="drop-toggle" href="#">UI Elements</a>
+                          <li class="has-dropdown"><a class="drop-toggle" >UI Elements</a>
                               <ul class="navbar-dropdown">
                                   <li><a href="form-elements.html">Form Elements</a></li>
                                   <li><a href="form-layout.html">Form Layout</a></li>
@@ -69,7 +70,7 @@
                                   <li><a href="alert-sweat.html">Sweat Alerts <span class="badge badge-warning">New</span></a></li>
                               </ul>
                           </li>
-                          <li class="has-dropdown"><a class="drop-toggle" href="#">Misc Pages</a>
+                          <li class="has-dropdown"><a class="drop-toggle" >Misc Pages</a>
                               <ul class="navbar-dropdown">
                                   <li><a href="404-error.html">404 Error</a></li>
                                   <li><a href="sign-in.html">Sign In / Login</a></li>
@@ -84,7 +85,7 @@
                                   <li><a href="_blank.html">Blank Page</a></li>
                               </ul>
                           </li>
-                          <li class="has-dropdown"><a class="drop-toggle" href="#">KYC / AML</a>
+                          <li class="has-dropdown"><a class="drop-toggle" >KYC / AML</a>
                               <ul class="navbar-dropdown">
                                   <li><a href="kyc-application.html">KYC Default</a></li>
                                   <li><a href="kyc-form.html">KYC Form</a></li>
@@ -93,21 +94,21 @@
                                   <li><a href="kyc-details.html">KYC Details - Admin</a></li>
                               </ul>
                           </li>
-                          <li class="has-dropdown"><a class="drop-toggle" href="#">User Pages</a>
+                          <li class="has-dropdown"><a class="drop-toggle" >User Pages</a>
                               <ul class="navbar-dropdown">
                                   <li><a href="profile.html">Profile Page</a></li>
                                   <li><a href="user-list.html">User List - Admin</a></li>
                                   <li><a href="user-details.html">User Details - Admin</a></li>
                               </ul>
                           </li>
-                          <li class="has-dropdown"><a class="drop-toggle" href="#">Transactions</a>
+                          <li class="has-dropdown"><a class="drop-toggle" >Transactions</a>
                               <ul class="navbar-dropdown">
                                   <li><a href="transactions.html">Transactions - User</a></li>
                                   <li><a href="admin-transactions.html">Transactions - Admin</a></li>
                                   <li><a href="transaction-details.html">Transaction Details</a></li>
                               </ul>
                           </li>
-                          <li class="has-dropdown"><a class="drop-toggle" href="#">Token Purchase</a>
+                          <li class="has-dropdown"><a class="drop-toggle" >Token Purchase</a>
                               <ul class="navbar-dropdown">
                                   <li><a href="buy-token.html">Buy Token - Modern</a></li>
                                   <li><a href="buy-token-s2.html">Buy Token - Simple</a></li>

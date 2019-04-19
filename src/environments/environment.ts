@@ -3,9 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig:
+  {
+  apiKey: 'AIzaSyAmUqXECXfDiD-CJ4NKwj29ho759ZV-jYM',
+  authDomain: 'daxtrion-3db14.firebaseapp.com',
+  databaseURL: 'https://daxtrion-3db14.firebaseio.com',
+  projectId: 'daxtrion-3db14',
+  storageBucket: 'daxtrion-3db14.appspot.com',
+  messagingSenderId: '589132988349'
+}
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

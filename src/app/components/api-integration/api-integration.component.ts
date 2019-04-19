@@ -82,7 +82,7 @@ export class ApiIntegrationComponent implements OnInit {
     console.log(respData);
     this.gapdata = respData;
   });
- } 
+ }
 
  public calllogsbc() {
   this.blockchainService.getCallreceiveBlockchain('/callback_log?' +

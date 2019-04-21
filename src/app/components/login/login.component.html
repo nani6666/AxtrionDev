@@ -1,10 +1,17 @@
 <div class="page-ath-wrap">
+        <div class="page-ath-gfx">
+                <div class="w-100 d-flex justify-content-center">
+                    <div class="col-md-8 col-xl-5">
+                        <img  src="../../../assets/images/letter-a-logo-template.jpg" alt="image">
+                    </div>
+                </div>            
+             </div>
   <div class="page-ath-content">
       <div class="page-ath-header">
           <a class="page-ath-logo"><img class="logoimg" src="../../../assets/images/letter-a-logo-template.jpg" srcset="images/logo2x.png 2x" alt="logo"></a>
       </div>
       <div class="page-ath-form">
-          <h2 class="page-ath-heading">Sign in <small>with your TokenWiz Account</small></h2>
+          <h2 class="page-ath-heading">Sign in <small>with your Axtrion Account</small></h2>
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <div class="input-item">
                   <input type="text" placeholder="Your Email" formControlName="email"  required="required" class="input-bordered" >
@@ -42,19 +49,13 @@
               Don’t have an account? <a [routerLink]="['/signup']"> <strong>Sign up here</strong></a>
           </div>
       </div>
-      <div class="page-ath-footer">
+      <!-- <div class="page-ath-footer">
           <ul class="footer-links">
               <li><a >Privacy Policy</a></li>
               <li><a >Terms</a></li>
-              <li>&copy; 2018 TokenWiz.</li>
+              <li>&copy; 2018 Axtrion.</li>
           </ul>
-      </div>
+      </div> -->
   </div>
-  <div class="page-ath-gfx">
-     <div class="w-100 d-flex justify-content-center">
-         <div class="col-md-8 col-xl-5">
-             <img  src="../../../assets/images/letter-a-logo-template.jpg" alt="image">
-         </div>
-     </div>            
-  </div>
+  
 </div>

@@ -1,4 +1,4 @@
- /*! Template: TokenWiz v1.0.3 */
+ /*! Template: Axtrion v1.0.3 */
 (function($){
 	'use strict';
 	var $win = $(window), $body = $('body'), $doc = $(document);

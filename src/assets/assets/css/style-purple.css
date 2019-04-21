@@ -1,5 +1,5 @@
 /*!
-Template :	TokenWiz - ICO User Dashboard
+Template :	Axtrion - ICO User Dashboard
 Preset   :	Purple
 Author	 :	Softnio
 Version	 :	1.0.3
@@ -3166,7 +3166,7 @@ select.select-sm { height: 37px; }
   .page-ath-gfx { width: 50%; display: flex; align-items: center; } }
 @media (min-width: 992px) { .page-header { padding: 15px 0 60px; } }
 @media (min-width: 1200px) { .page-ath-content { width: 38%; }
-  .page-ath-gfx { width: 62%; } }
+  .page-ath-gfx { width: 50%; } }
 .content-area .card-head { padding-bottom: 10px; }
 
 /*! Bootstrap Overide */

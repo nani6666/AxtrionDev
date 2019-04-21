@@ -1,5 +1,5 @@
 /*!
-Template :	TokenWiz - ICO User Dashboard
+Template :	Axtrion - ICO User Dashboard
 Preset   :	Pegien
 Author	 :	Softnio
 Version	 :	1.0.3
@@ -3165,8 +3165,8 @@ select.select-sm { height: 37px; }
 @media (min-width: 768px) { .page-ath-content { width: 50%; }
   .page-ath-gfx { width: 50%; display: flex; align-items: center; } }
 @media (min-width: 992px) { .page-header { padding: 15px 0 60px; } }
-@media (min-width: 1200px) { .page-ath-content { width: 38%; }
-  .page-ath-gfx { width: 62%; } }
+@media (min-width: 1200px) { .page-ath-content { width: 50%; }
+  .page-ath-gfx { width: 50%; } }
 .content-area .card-head { padding-bottom: 10px; }
 
 /*! Bootstrap Overide */

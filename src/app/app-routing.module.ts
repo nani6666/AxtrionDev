@@ -13,6 +13,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { UserDetailsComponent } from './components/users/user-details/user-details.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'api-demo', component: ApiIntegrationComponent },
   { path: 'user-details', component: UserDetailsComponent },
-  { path: 'user-list', component: UsersListComponent }
+  { path: 'user-list', component: UsersListComponent },
+  { path: 'admin-login', component: AdminLoginComponent }
 ];
 
 @NgModule({

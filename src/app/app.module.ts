@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { UserDetailsComponent } from './components/users/user-details/user-details.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { UserDetailsComponent } from './components/users/user-details/user-detai
     SignupComponent,
     ApiIntegrationComponent,
     UsersListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

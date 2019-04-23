@@ -12,10 +12,6 @@
       </div>
      
       <div class="page-ath-form"  >
-             <div class="btn-group btn-group-sm">
-    <button type="button" class="btn  btn-outline-warning text-dark" [ngClass]="{active: userdiv == false}" (click)="userdiv = false" >Admin</button>
-    <button type="button" class="btn btn-outline-success text-dark" [ngClass]="{active: userdiv != false}" (click)="userdiv = true">User</button>
-  </div>
           <h2 class="page-ath-heading">Sign in <small>with your Axtrion Account</small></h2>
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <div class="input-item">
@@ -42,9 +38,9 @@
               </div>
               <button class="btn btn-primary btn-block">Sign In</button>
           </form>
-          <div class="sap-text" *ngIf="userdiv" ><span>Or Sign In With</span></div>
+          <div class="sap-text" ><span>Or Sign In With</span></div>
 
-          <ul class="row guttar-20px guttar-vr-20px" *ngIf="userdiv">
+          <ul class="row guttar-20px guttar-vr-20px" >
               <li class="col"><a class="btn btn-outline btn-dark btn-facebook btn-block" href="#"><em class="fab fa-facebook-f"></em><span>Facebook</span></a></li>
               <li class="col"><a class="btn btn-outline btn-dark btn-google btn-block" href="#"><em class="fab fa-google"></em><span>Google</span></a></li>
           </ul>

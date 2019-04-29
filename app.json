@@ -1,0 +1,18 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/nani6666/AxtrionDev"
+    }
+  ],
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "AxtrionDev",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
